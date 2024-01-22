@@ -10,6 +10,9 @@ services:
     ports:
       - 3131:3131
     command: yarn start:app_1
+    networks:
+    - nginx.docker
+
   app_2:
     container_name: ssl-test-be-app-2
     restart: unless-stopped
@@ -19,3 +22,10 @@ services:
     ports:
       - 3232:3232
     command: yarn start:app_2
+    networks:
+    - nginx.docker
+
+networks:
+  nginx.docker:
+    name: nginx.docker
+    external: true   
