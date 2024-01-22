@@ -1,0 +1,21 @@
+version: "3.8"
+name: ssl-test-be
+services:
+  app_1:
+    container_name: ssl-test-be-app-1
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./app_1/Dockerfile
+    ports:
+      - 3131:3131
+    command: yarn start:app_1
+  app_2:
+    container_name: ssl-test-be-app-2
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./app_2/Dockerfile
+    ports:
+      - 3232:3232
+    command: yarn start:app_2

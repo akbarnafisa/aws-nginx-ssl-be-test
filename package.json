@@ -1,0 +1,16 @@
+{
+  "name": "be-test-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:app_1": "node ./app_1/main.js",
+    "start:app_2": "node ./app_2/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
